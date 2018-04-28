@@ -1,0 +1,45 @@
+zuul:
+    ignoredServices: '*'
+    routes:
+        creditrating:
+            path: /coffeeshop/creditrating/**
+            serviceId: creditrating
+            stripPrefix: false
+        location:
+            path: /coffeeshop/nearest/**
+            serviceId: location
+            stripPrefix: false
+        order:
+            path: /coffeeshop/**/order
+            serviceId: order
+            stripPrefix: false
+        order_get:
+            path: /coffeeshop/**/order/**
+            serviceId: order
+            stripPrefix: false
+        order_menu:
+            path: /coffeeshop/menu/**
+            serviceId: order
+            stripPrefix: false
+ 
+creditrating:
+    ribbon:
+        ConnectTimeout: 60000
+        ReadTimeout: 60000
+        MaxTotalHttpConnections: 10
+        MaxConnectionsPerHost: 10
+
+location:
+    ribbon:
+        ConnectTimeout: 60000
+        ReadTimeout: 60000
+        MaxTotalHttpConnections: 10
+        MaxConnectionsPerHost: 10
+        
+order:
+    ribbon:
+        ConnectTimeout: 60000
+        ReadTimeout: 60000
+        MaxTotalHttpConnections: 10
+        MaxConnectionsPerHost: 10
+ 
