@@ -1,2 +1,2 @@
-# microcoffeeoncloud-appconfig
-Config repo of microcoffeeoncloud application. Used by Spring Config Server.
+# microcoffeeoncloud-appconfig-s
+Config repo of microcoffeeoncloud-s application. Used by Spring Config Server.
